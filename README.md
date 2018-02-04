@@ -16,7 +16,7 @@ There is also the **Sandbox Mode**, which let's you try out all the skills learn
 
 ## How to use
 
-To run on Mac, download this repository and unzip. Run the file *Quantum_Programming_Tutorial* found inside. Instructions for Linux are coming soon.
+To run on Mac, download [this folder](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzip. Run the file *Quantum_Programming_Tutorial* found inside. Instructions for Linux are coming soon.
 
 The program runs on the command line. For best results, you should maiximize the size of your command line window. If you need to change font and background settings, you can use the `⌘,` shortcut. on Mac The *Basic* profile with Menlo 11pt font and white background work well.
 
