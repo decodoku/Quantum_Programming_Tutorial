@@ -24,3 +24,6 @@ The program runs on the command line. For best results, you should maximize the 
 
 Once you have mastered this tutorial, you will be writing the kind of quantum programs found in the [tutorial for the QISKit SDK](https://github.com/QISKit/qiskit-tutorial). So head there to find more inspiration.
 
+## Credits
+
+This project was a collaboration between James R. Wootton at the University of Basel and some supporters of QISKit.
