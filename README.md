@@ -2,7 +2,7 @@
 
 Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming, which will guide you in the creation of your first quantum programs.
 
-This tutorial is currently in beta, and so content will be added over time. We are seeking any and all feedback throughout this process to help us build the finished product.
+This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product.**
 
 You can start off with **Story Mode**, which will introduce you to the basics of manipulating quantum information. Each level is presented as a simple puzzle, and there is *almost* a storyline, so it might even seem like you are playing a game!
 
