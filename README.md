@@ -20,7 +20,7 @@ There is also the **Sandbox Mode**, which let's you try out all the skills learn
 
 Start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
 
-If you have a MAC, you can simomply run the file *QuantumProgrammingTutorial* found inside. You should need to change your security settings to allow it to run *(note: running executables from the internet is not a great idea in general)*. If you prefer to compile yourself, you can do this using the Xcode project found in the folder.
+If you have a Mac, you can simomply run the file *QuantumProgrammingTutorial* found inside. You should need to change your security settings to allow it to run *(note: running executables from the internet is not a great idea in general)*. If you prefer to compile yourself, you can do this using the Xcode project found in the folder.
 
 To complile on Linux, you'll need to [install Swift](https://swift.org/getting-started/#installing-swift). Then dowmload this repository and navigate to
 
