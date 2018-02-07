@@ -41,7 +41,7 @@ The program runs on the command line. For best results, you should maximize the 
 For some discussion of what is being done in the tutorial, check out the following articles.
 * [Visualizing bits and qubits](https://medium.com/qiskitters/visualizing-bits-and-qubits-9af287047b28)
 
-Once you have mastered the tutorial, you will be writing the kind of quantum programs found in the [tutorial for the QISKit SDK](https://github.com/QISKit/qiskit-tutorial). So head there to find more inspiration.
+Once you have mastered this gamified tutorial, you will be writing the kind of quantum programs found in the [tutorial for the QISKit SDK](https://github.com/QISKit/qiskit-tutorial). So head there to find more inspiration.
 
 ## Credits
 
