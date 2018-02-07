@@ -18,7 +18,21 @@ There is also the **Sandbox Mode**, which let's you try out all the skills learn
 
 ## How to use
 
-To run on Mac, download [this folder](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzip. Run the file *QuantumProgrammingTutorial* found inside. Instructions for Linux are coming soon.
+Start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
+
+If you have a MAC, you can simomply run the file *QuantumProgrammingTutorial* found inside. You should need to change your security settings to allow it to run *(note: running executables from the internet is not a great idea in general)*. If you prefer to compile yourself, you can do this using the Xcode project found in the folder.
+
+To complile on Linux, you'll need to [install Swift](https://swift.org/getting-started/#installing-swift). Then dowmload this repository and navigate to
+
+``` Quantum_Programming_Tutorial-master/Hello\ Quantum/Hello\ Quantum```
+
+then use the following commands to compile and run.
+
+```
+swiftc StringCommandLineColorExtension.swift Shrink.swift main.swift
+./main
+```
+For Windows, no way of compiling the Swift source codes has been tested. It might be possible, but we just don't know.
 
 The program runs on the command line. For best results, you should maximize the size of your command line window. If you need to change font and background settings, you can use the `⌘,` shortcut on Mac. The *Basic* profile with Menlo 11pt font and white background work well.
 
