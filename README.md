@@ -30,21 +30,17 @@ Depending on your screen size, you may also need to pull the divider between sou
 
 The game can also be run offline on your own console. To do this, start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
 
-If you have a Mac, you can simply run the file *QuantumProgrammingTutorial* found inside. You'll need to change your security settings to allow it to run *(Note: running executables from the internet is not, in general, a great idea.)* To compile yourself, use the Xcode project found in the folder.
+Once you've downloaded the repository, navigate with the terminal to
 
-To compile on Linux, you'll need to [install Swift](https://swift.org/getting-started/#installing-swift). Then, once you've downloaded this repository, navigate to
+``` Quantum_Programming_Tutorial-master/Hello_Quantum_Python```
 
-``` Quantum_Programming_Tutorial-master/Hello\ Quantum/Hello\ Quantum```
-
-The following commands will then compile and run the tutorial.
+Then use the following command to run the tutorial
 
 ```
-swiftc StringCommandLineColorExtension.swift Shrink.swift main.swift
-./main
+python main.py
 ```
-For Windows, no way of compiling the Swift source codes has been tested. You can instead using the Python source files [here](https://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer).
 
-The program runs on the command line. For best results, you should maximize the size of your command line window. If you need to change font and background settings, you can use the `⌘,` shortcut on Mac. The *Basic* profile with Menlo 11pt font and white background work well.
+The program runs on the terminal. For best results, you should maximize the size of your command line window. If you need to change font and background settings, you can use the `⌘,` shortcut on Mac. The *Basic* profile with Menlo 11pt font and white background work well.
 
 ## What next?
 
