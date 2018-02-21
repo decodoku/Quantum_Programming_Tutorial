@@ -2,7 +2,15 @@
 
 Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming, which will guide you in the creation of your first quantum programs.
 
-This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product.**
+The easiest way to play is to use the browswer version [here](https://repl.it/@quantum_jim/QuantumProgrammingTutorial). Just press the run button, as highlighted in red in the image below.
+
+![alt text](https://github.com/decodoku/Quantum_Programming_Tutorial/blob/master/replit.png)
+
+Depending on your screen size, you may also need to pull the divider between source and console to the left and/or zoom out.
+
+This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
+
+# Current modes of play
 
 You can start off with **Story Mode**, which will introduce you to the basics of manipulating quantum information. Each level is presented as a simple puzzle, and there is *almost* a storyline, so it might even seem like you are playing a game!
 
@@ -16,15 +24,11 @@ More are coming soon.
 
 There is also the **Sandbox Mode**, which let's you try out all the skills learned in the puzzles.
 
-## How to use
+## Ways to play
 
 **Browser version**
 
-The easiest way is to use the browswer version [here](https://repl.it/@quantum_jim/QuantumProgrammingTutorial). Just press the run button, as highlighted in red in the image below.
-
-![alt text](https://github.com/decodoku/Quantum_Programming_Tutorial/blob/master/replit.png)
-
-Depending on your screen size, you may also need to pull the divider between source and console to the left and/or zoom out.
+For details on the browser version, see above.
 
 **Desktop Version**
 
