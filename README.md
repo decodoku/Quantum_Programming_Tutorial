@@ -2,7 +2,7 @@
 
 Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming, which will guide you in the creation of your first quantum programs.
 
-The easiest way to play is to use the browswer version [here](https://repl.it/@quantum_jim/QuantumProgrammingTutorial). Just press the run button, as highlighted in red in the image below.
+The easiest way to play is to use the browser version [here](https://repl.it/@quantum_jim/QuantumProgrammingTutorial). Just press the run button, as highlighted in red in the image below.
 
 ![alt text](https://github.com/decodoku/Quantum_Programming_Tutorial/blob/master/replit.png)
 
