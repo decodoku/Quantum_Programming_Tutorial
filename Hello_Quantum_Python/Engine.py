@@ -1,5 +1,10 @@
 import math, subprocess
 
+def ClearScreen () :
+  # DESCRIPTION:
+  #     Prints a whole bunch of space to screen
+  print("\n"*200)
+
 def ColouredString (message,colour) :
   #  DESCRIPTION:
   #      Prints in a colour specified by the colour in ["r","b","p"] and then sets what follows back to white
@@ -351,8 +356,7 @@ def PrintScreen ( message, level, intro, program, state, shown_qubit, active_qub
 
   # set up the screen: job 1
   # text at the top
-  #replit.clear()
-  subprocess.call(['tput', 'reset'])
+  ClearScreen ()
   print("\nLevel "+str(level+1)+"\n")
   for line in intro[level] :
     print("> " + line + "...")
@@ -387,4 +391,3 @@ def PrintScreen ( message, level, intro, program, state, shown_qubit, active_qub
       print(gate_list)
 
   return input("\n"+message+"\n")
-

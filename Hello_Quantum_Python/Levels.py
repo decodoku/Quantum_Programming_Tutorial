@@ -503,7 +503,21 @@ def  GetLevelStory ( ) :
                  "TARGET: Turn off the blue boxes using the allowed gates"] )
   outro.append( ["Great!",
                  "All the chips in this fridge have now been fully tested and reset",
-                 "I'll initiate the procedure to get you out of here",
+                 "I'll initiate the procedure to get you out of here"] )
+
+  # 34
+  state_list.append( {"XI":1.0, "ZI":1.0,
+                      "XX":-1.0,"XZ":0.0,"ZX":0.0,"ZZ":-1.0,"YY":0.0,
+                      "IX":-1.0, "IZ":-1.0} )
+  success_condition_list.append( {"XI":-1.0, "ZI":-1.0,
+                                  "IX":1.0, "IZ":1.0} )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
+
+  intro.append( ["While you are waiting for the teleport, let's look at how to swap the states of two qubits",
+                 "This means completely flipping the grid, so that everything for qubit 0 moves to qubit 1, and vice versa",
+                 "TARGET: Turn the top boxes on, and the left boxes off, using only h and cz"] )
+  outro.append( ["Well done! Let's get you out of here",
                  "If you want to apply some of the tools you've learned, start up this program again and try some other options"] )
 
 

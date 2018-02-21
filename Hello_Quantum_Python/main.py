@@ -11,8 +11,7 @@ from Levels import *
 
   
 # clear screen and put title
-#replit.clear()
-#subprocess.call(['tput', 'reset'])
+ClearScreen ()
 print("")
 print("")
 print("              ██╗  ██╗███████╗██╗     ██╗      ██████╗       ")              
@@ -32,8 +31,14 @@ print("\n")
 print("\n")
 print("             A GAMIFIED TUTORIAL FOR QUANTUM PROGRAMMING")
 print("                               ")
-print("            For more resources and to give feedback, visit:")
+print("       For more resources, and the least glitchy verson, visit:")
 print("           github.com/decodoku/Quantum_Programming_Tutorial")
+print("             To give feedback, please do this short survey:")
+print("            www.surveygizmo.com/s3/4213712/helloquantum-cl")
+print("\n")
+print("\n")
+print("\n")
+print("\n")
 print("\n")
 print("\n")
 input("> Press Enter to continue...\n")
@@ -125,7 +130,7 @@ while (level<level_num) :
   success = False
   restart = False
     
-  #replit.clear()
+  ClearScreen ()
   print("\nLevel "+str(level+1)+"\n")
   for line in intro[level] :
     input("> " + line + "...")
