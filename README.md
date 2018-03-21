@@ -8,6 +8,8 @@ The easiest way to play is to use the browser version [here](https://repl.it/@qu
 
 Depending on your screen size, you may also need to pull the divider between source and console to the left and/or zoom out.
 
+Though the above method is the easiest, it can be a bit glitchy. See below for a better method.
+
 This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
 
 # Current modes of play
