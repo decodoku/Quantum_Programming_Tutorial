@@ -4,21 +4,15 @@ Do you want to program quantum computers, but don't know where to start? Then yo
 
 The command line version found here will help you get started with QISKit. A version focussed on IBM's Quantum Experience will be released as an app soon.
 
-The easiest way to play the command line version is using your browser. Just visit [this link](https://repl.it/@quantum_jim/QuantumProgrammingTutorial). Press the run button, as highlighted in red in the image below.
-
-![alt text](https://github.com/decodoku/Quantum_Programming_Tutorial/blob/master/replit.png)
-
-Depending on your screen size, you may also need to pull the divider between source and console to the left and/or zoom out.
-
-Though the above method is the easiest, it can be a bit glitchy. See below for a better method.
-
 This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
 
 # Current modes of play
 
-You can start off with **Story Mode**, which will introduce you to the basics of manipulating quantum information. Each level is presented as a simple puzzle, and there is *almost* a storyline, so it might even seem like you are playing a game!
+You can start off with the **Main Tutorial**, which will introduce you to the basics of manipulating quantum information. The basic operations of quantum computing are introduced through a set of puzzles. The **Qubit Swapper** mode is more of the same.
 
-Then there are a range of modes designed to interact with Jupyter notebooks that we've created. The tutorial will guide you to create your own program to solve a real problem, and the notebooks will allow you to run these programs on a real quantum computer.
+After this, you may want the freedom to play around with the qubits used in the puzzles, and try out the skills you've learned. For this you can use the **Sandbox Mode**.
+
+There are then a range of modes designed to interact with Jupyter notebooks that we've created. The tutorial will guide you to create your own program to solve a real problem, and the notebooks will allow you to run these programs on a real quantum computer.
 
 Current supported modes are as follows.
 
@@ -26,21 +20,13 @@ Current supported modes are as follows.
 
 More are coming soon.
 
-There is also the **Sandbox Mode**, which let's you try out all the skills learned in the puzzles.
+## How to Play
 
-## Ways to play
-
-**Browser version**
-
-For details on the browser version, see above.
-
-**Desktop Version**
-
-The game can also be run offline on your own console. To do this, start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
+The game runs on the command line. To run it, start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
 
 Once you've downloaded the repository, navigate with the terminal to
 
-``` Quantum_Programming_Tutorial-master/Hello_Quantum_Python```
+``` Quantum_Programming_Tutorial-master/Hello-Quantum```
 
 Then use the following command to run the tutorial
 
