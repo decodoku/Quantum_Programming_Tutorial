@@ -68,7 +68,21 @@ def ExchangeBoxes ( state, box1, box2 ) :
   output_state[box1] = output_state[box2]
   output_state[box2] = temp
   return output_state
+
+def Swap ( state ) :
+  #  DESCRIPTION:
+  #      Determines the state after a swap gate
+  #  INPUT:
+  #      {String: Float}    state       Two qubit state.
+  #  OUTPUT:
+  #      {String: Float}    state       Transformed version of input state.
     
+  swapped_state = {}
+  for box in state.keys():
+    swapped_state[box[1]+box[0]] = state[box]
+    
+  return swapped_state
+
 def ApplyGate ( state, gate, qubit ) :
   #  DESCRIPTION:
   #      Transforms the given state according to the given gate.

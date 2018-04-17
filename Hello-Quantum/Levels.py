@@ -3,8 +3,8 @@
 
 from Engine import *
 
-# story mode
-def  GetLevelStory ( ) :
+# Story Mode
+def GetLevelStory ( ) :
 
   state_list = []
   success_condition_list = []
@@ -21,22 +21,18 @@ def  GetLevelStory ( ) :
   qubits_used_list.append( [ "0", "1" ] )
   allowed_gates_list.append( { "0":{"x":3}, "1":{}, "both":{} } )
 
-  intro.append( ["If you are reading this, you are the size of a speck of dust and sitting inside a dilution refrigerator",
-                 "Don't worry if you are a bit confused. Memory loss is a common side effect of the shrinking and teleportation procedure",
-                 "I am your QIS Board, and I'm here to help you with your job",
-                 "You are surrounded by qubits, the basic unit of quantum computation",
-                 "They need their daily maintenance. Your job is to reset them, and to fix anything that isn't working",
-                 "In case you are suffering severe memory loss, I'll assume you don't know much about programming qubits and need to start with the basics",
-                 "There's a chip with a couple of qubits right next to you. The first one is called qubit 0",
-                 "I'll scan it for you to visualize the state",
-                 "You'll see a grid with two coloured boxes: a horizontal one coloured red and a vertical one coloured blue",
-                 "There will also be some instructions underneath",
-                 "You need to use a command known as x to reset the qubit",
+  intro.append( ["In these puzzles, you'll see a grid and be given a task",
+                 "Your job is to complete that task by using quantum programming",
+                 "We'll start off with the basics, and then add more as we go",
+                 "Your first job concerns a single qubit, which we call qubit 0",
+                 "The state of this is visualized on the grid using two coloured boxes",
+                 "One of the boxes is horizontal and coloured red, and the other is a vertical box coloured blue",
+                 "This qubit needs to be reset, which means that the blue box needs to be turned off",
+                 "This is done usig the command known as x",
                  "One x should be enough but, to make sure the its working properly, do it three times instead",
                  "TARGET: Turn off the blue box, and use the x command 3 times"] )
   outro.append( ["Great!",
-                 "As you probably noticed, x turns the blue box on and off",
-                 "And off is the state we needed to reset it to"] )
+                 "The x command turns the blue box on and off, and does nothing to the red box"] )
   
   #2
   state_list.append( {"XI":0.0, "ZI":0.0,
@@ -46,13 +42,12 @@ def  GetLevelStory ( ) :
   qubits_used_list.append( [ "0", "1" ] )
   allowed_gates_list.append( { "0":{}, "1":{"x":3}, "both":{} } )
 
-  intro.append( ["The other qubit on the chip is called qubit 1. It's also described by two boxes",
-                 "But because it's a different qubit, they are in a different place",
+  intro.append( ["Now we'll look at another qubit, called qubit 1",
+                 "It's also described by two boxes. But because it's a different qubit, they are in a different place",
                  "To reset it, and to test out the x, do the same as before",
                  "TARGET: Turn off the blue box, and use the x command 3 times"] )
   outro.append( ["Great!",
-                 "It seems that x is working fine, so you needn't bother repeating three times any more",
-                 "On to the next chip"] )
+                 "Now you've gotten the hang of x, you won't need to repeat it 3 times any more."] )
   
   #3
   state_list.append( {"XI":0.0, "ZI":-1.0,
@@ -62,10 +57,11 @@ def  GetLevelStory ( ) :
   qubits_used_list.append( [ "0", "1" ] )
   allowed_gates_list.append( { "0":{"x":0}, "1":{}, "both":{} } )
 
-  intro.append( ["I should probably remind you why you are doing this, in case you've forgotten",
-                 "When we extract an output from a qubit, we get a bit",
-                 "The blue box tells us which bit value we'll get",
-                 "Off means 0, and on means 1",
+  intro.append( ["Now we move on to another chip, with another qubit 0. But what is a qubit?",
+                 "A qubit is a quantum object that can be turned into a bit",
+                 "There are many ways we can do this, and the result we get depends on the method we use",
+                 "Our favourite way to extract the bit is to use the blue box",
+                 "If it's 'off', we get 0. If it's 'on' we get 1",
                  "TARGET: Turn off the blue box"] )
   outro.append( ["Great!","Now for the next qubit"] )
   
@@ -111,7 +107,7 @@ def  GetLevelStory ( ) :
                  "By the way, extracting an output from a box that's half on would give a random result"] )
   
   #7
-  state_list.append( {"XI":-1.0, "ZI":0.0,
+  state_list.append( {"XI":0.0, "ZI":-1.0,
                       "XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":0.0,"YY":0.0,
                       "IX":0.0, "IZ":0.0} )
   success_condition_list.append( {"ZI":1.0} )
@@ -127,13 +123,17 @@ def  GetLevelStory ( ) :
   #8
   state_list.append( {"XI":0.0, "ZI":0.0,
                       "XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":0.0,"YY":0.0,
-                      "IX":0.0, "IZ":-1.0} )
+                      "IX":1.0, "IZ":0.0} )
   success_condition_list.append( {"IZ":1.0} )
   qubits_used_list.append( [ "0", "1" ] )
   allowed_gates_list.append( { "0":{}, "1":{"z":0,"h":0}, "both":{} } )
 
-  intro.append( ["Keep up the good work!",
-                 "TARGET: Turn off the blue box without using the x command"] )
+  intro.append( ["The red boxes represent another way to get a bit out of a qubit",
+                 "Again, 'off' gives you a 0 and 'on' gives you a 1."
+                 "The red box can only be certain of the result it would give when the blue box is completely random",
+                 "Qubits only have a limited amount of certainty to go round",
+                 "The h command swaps the results you'd get for blue and red",
+                 "TARGET: Move the off to blue and the randomness to red"] )
   outro.append( ["Great!","Now on to the next chip"] )
   
   #9
@@ -172,12 +172,13 @@ def  GetLevelStory ( ) :
   allowed_gates_list.append( { "0":{"x":0,"z":0,"h":0}, "1":{"x":0,"z":0,"h":0}, "both":{} } )
 
   intro.append( ["In case you are wondering about the extra boxes, they tell us about the relationship between the two qubits",
-                 "The blue one, for example, keeps track of how likely the two outputs are to agree",
-                 "It is off when the ouptuts of the two qubits will definitely agree, and on when they'll definitely disagree",
+                 "The blue one, for example, keeps track of how likely the two blue outputs are to agree",
+                 "It is off when the blue ouptuts of the two qubits will definitely agree, and on when they'll definitely disagree",
                  "Keep an eye on how it changes on this chip",
                  "TARGET: Turn off the blue boxes"] )
   outro.append( ["Great!",
-                 "The other new boxes do similar jobs, tracking agreement and disagreement for alternative types of measurement"] )
+                 "The extra red box similarly looks for agreements of the red boxes",
+                 "The two purple ones are for the blue output of one qubit, and the red one of the other"] )
   
   #12
   state_list.append( {"XI":0.0, "ZI":-1.0,
@@ -241,8 +242,7 @@ def  GetLevelStory ( ) :
   outro.append( ["Great!","Now on to the next chip",
                  "Have you noticed the program that is getting displayed as you work",
                  "This is the code you are writing for the quantum computer, using the QISKit SDK",
-                 "I am programmed to tell you that it is the best quantum SDK that is or ever will be",
-                 "It is a real thing, even for those people in another universe for which the rest of this is fiction"] )
+                 "Check out qiskit.org for more information"] )
   
   #17
   state_list.append( {"XI":1.0, "ZI":-1.0,
@@ -253,10 +253,8 @@ def  GetLevelStory ( ) :
   allowed_gates_list.append( { "0":{"x":0,"z":0,"h":0}, "1":{"x":0,"z":0,"h":0}, "both":{} } )
 
   intro.append( ["Another well behaved chip",
-                 "By the way, most of IBM's chips have more than qubits",
-                 "There is one with as many as 50 qubits!",
-                 "But those devices have proper control equipment to reset and retune them",
-                 "Rather than the weird shrinking and teleporting thing we need to do here",
+                 "By the way, most of IBM's chips have more than just two qubits",
+                 "In fact, you can use a real device with 16 qubits from the comfort of your own home"
                  "TARGET: Turn off the blue boxes"] )
   outro.append( ["Great!","Now on to the next chip"] )
 
@@ -502,25 +500,105 @@ def  GetLevelStory ( ) :
                  "So you may need to create one of these",
                  "TARGET: Turn off the blue boxes using the allowed gates"] )
   outro.append( ["Great!",
-                 "All the chips in this fridge have now been fully tested and reset",
-                 "I'll initiate the procedure to get you out of here"] )
+                 "You have successfully tested and reset a whole bunch of qubits",
+                 "To find out how to do more than just reset them, check out the other modes in this program"] )
 
-  # 34
-  state_list.append( {"XI":1.0, "ZI":1.0,
-                      "XX":-1.0,"XZ":0.0,"ZX":0.0,"ZZ":-1.0,"YY":0.0,
-                      "IX":-1.0, "IZ":-1.0} )
-  success_condition_list.append( {"XI":-1.0, "ZI":-1.0,
-                                  "IX":1.0, "IZ":1.0} )
+  level_num = len(state_list)
+    
+  return state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro
+
+
+# sandbox
+def GetLevelSwaps () :
+
+  state_list = []
+  success_condition_list = []
+  qubits_used_list = []
+  allowed_gates_list = []
+  intro = []
+  outro = []
+
+  # 1
+  state_list.append( {"XI":0.5, "ZI":0.5,
+                      "XX":-0.5,"XZ":0.0,"ZX":0.0,"ZZ":-0.5,"YY":0.0,
+                      "IX":-0.5, "IZ":-0.5} )
+  success_condition_list.append( Swap(state_list[-1]) )
   qubits_used_list.append( [ "0", "1" ] )
   allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-  intro.append( ["While you are waiting for the teleport, let's look at how to swap the states of two qubits",
-                 "This means completely flipping the grid, so that everything for qubit 0 moves to qubit 1, and vice versa",
-                 "TARGET: Turn the top boxes on, and the left boxes off, using only h and cz"] )
-  outro.append( ["Well done! Let's get you out of here",
-                 "If you want to apply some of the tools you've learned, start up this program again and try some other options"] )
+  intro.append( ["In these puzzles, your job is to swap the states of two qubits",
+                 "This can always be done with nothing more than h operations, and either cz or cx",
+                 "TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!","Now try another"] )
 
+  # 2
+  state_list.append( {"XI":0.5, "ZI":0.0,
+                      "XX":0.5,"XZ":0.5,"ZX":0.0,"ZZ":-0.5,"YY":0.5,
+                      "IX":0.0, "IZ":0.5} )
+  success_condition_list.append( Swap(state_list[-1]) )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
+  intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!","Now try another"] )
+    
+  # 3
+  state_list.append( {"XI":0.0, "ZI":0.5,
+                      "XX":-0.5,"XZ":0.0,"ZX":-0.5,"ZZ":0.5,"YY":0.5,
+                      "IX":-0.5, "IZ":0.0} )
+  success_condition_list.append( Swap(state_list[-1]) )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
+
+  intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!","Now try another"] )
+    
+  # 4
+  state_list.append( {"XI":0.0, "ZI":-0.5,
+                      "XX":0.0,"XZ":0.5,"ZX":0.5,"ZZ":-0.5,"YY":0.5,
+                      "IX":0.0, "IZ":0.5} )
+  success_condition_list.append( Swap(state_list[-1]) )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
+
+  intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!","Now try another"] )
+    
+  # 5
+  state_list.append( {"XI":0.0, "ZI":0.5,
+                      "XX":0.0,"XZ":0.5,"ZX":-0.5,"ZZ":0.5,"YY":-0.5,
+                      "IX":0.0, "IZ":0.5} )
+  success_condition_list.append( Swap(state_list[-1]) )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
+
+  intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!","Now try another"] )
+    
+  # 6
+  state_list.append( {"XI":0.5, "ZI":0.0,
+                      "XX":-0.5,"XZ":-0.5,"ZX":-0.5,"ZZ":0.0,"YY":0.5,
+                      "IX":-0.5, "IZ":0.0} )
+  success_condition_list.append( Swap(state_list[-1]) )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
+
+  intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!","Now try another"] ) 
+    
+  # 7
+  state_list.append( {"XI":0.5, "ZI":0.0,
+                      "XX":0.5,"XZ":0.5,"ZX":-0.5,"ZZ":0.0,"YY":-0.5,
+                      "IX":0.5, "IZ":0.0} )
+  success_condition_list.append( Swap(state_list[-1]) )
+  qubits_used_list.append( [ "0", "1" ] )
+  allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
+
+  intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+  outro.append( ["Well done!",
+                 "Your solution to each of these probably would have worked for all the others too",
+                 "If so, you suceeded in making a swap gate!"] ) 
+    
   level_num = len(state_list)
 
   return state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro

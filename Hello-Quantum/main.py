@@ -44,19 +44,23 @@ print("\n")
 input("> Press Enter to continue...\n")
 print("  Choose which mode you want to play from the following list")
 print("")
-print("  1 - Story Mode\n      A gamified tutorial for programming quantum computers.\n")
-print("  2 - Sandbox\n      A chance to do what you want with two qubits.\n")
-print("  3 - Image Superposer\n      Write a quantum program to create superpositions of images.\n")
+print("  1 - Main Tutorial\n      A gamified tutorial for programming quantum computers.\n")
+print("  2 - Qubit Swapper\n      A few puzzles dedicated to the task of swapping qubits\n")
+print("  3 - Sandbox\n      A chance to do what you want with two qubits.\n")
+print("  4 - Image Superposer\n      Write a quantum program to create superpositions of images.\n")
 choosing = True
 while choosing:
   mode = input("> Input a number to select a mode...\n")
-  if mode in ["1","2","3"]:
+  if mode in ["1","2","3","4"]:
     choosing = False
   else:
     input("> That's not a valid mode. Press Enter to try again...\n")
 
-if mode=="1":
-  state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelStory()
+if mode in ["1","2"]:
+  if mode=="1":
+      state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelStory()
+  elif mode=="2":
+      state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelSwaps()
   choosing = True
   while choosing:
     level = input("\n> Select a level (from 1 to "+str(level_num)+")...\n")
@@ -71,10 +75,10 @@ if mode=="1":
       level = 0
       choosing = False
       input("> That was not a valid level, so we'll start from the beginning...\n")
-elif mode=="2":
+elif mode=="3":
   state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelSandbox()
   level = 0
-elif mode=="3":
+elif mode=="4":
 
   allowed_filenames = ["0000","0001","0010","0011", "0100","0101","0110","0111", "1000","1001","1010","1011", "1100","1101","1110","1111"]
 
@@ -107,11 +111,11 @@ else:
 while (level<level_num) :
     
   # specifications for this level
-  state = state_list[level]
-  allowed_gates = allowed_gates_list[level]
+  state = copy.deepcopy(state_list[level])
+  allowed_gates = copy.deepcopy(allowed_gates_list[level])
   required_gates = copy.deepcopy(allowed_gates)
-  qubits_used = qubits_used_list[level]
-  success_condition = success_condition_list[level]
+  qubits_used = copy.deepcopy(qubits_used_list[level])
+  success_condition = copy.deepcopy(success_condition_list[level])
 
   bloch = False # always start a level with Bloch off
   active_qubit = -1 # and no active qubit
@@ -244,11 +248,11 @@ while (level<level_num) :
     level += 1
 
 
-if mode==1 :
+if mode in ["1","2"] :
   input("> That's all the levels we have for now. Restart the program, or continue your QISKit journey at QISKit.org\n")
-elif mode==2 :
+elif mode=="3" :
   input("> How are you seeing this?!?!?!?!?!?!?!\n")
-elif mode==3 :
+elif mode=="4" :
   input("> Now you have your QISKit program. You just need to run the notebook for your image.\n")
 
 
