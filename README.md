@@ -6,7 +6,7 @@ The command line version found here will help you get started with QISKit. A ver
 
 This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
 
-# Current modes of play
+## Current modes of play
 
 You can start off with the **Main Tutorial**, which will introduce you to the basics of manipulating quantum information. The basic operations of quantum computing are introduced through a set of puzzles. The **Qubit Swapper** mode is more of the same.
 
