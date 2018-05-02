@@ -12,9 +12,7 @@ You can start off with the **Main Tutorial**, which will introduce you to the ba
 
 After this, you may want the freedom to play around with the qubits used in the puzzles, and try out the skills you've learned. For this you can use the **Sandbox Mode**.
 
-There are then a range of modes designed to interact with Jupyter notebooks that we've created. The tutorial will guide you to create your own program to solve a real problem, and the notebooks will allow you to run these programs on a real quantum computer.
-
-Current supported modes are as follows.
+There are then the following range of modes designed to interact with Jupyter notebooks that we've created. The tutorial will guide you to create your own program to solve a real problem, and the notebooks will allow you to run these programs on a real quantum computer.
 
 * **Image Superposer**: Create quantum superpositions of images with the notebook [here](https://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer).
 
