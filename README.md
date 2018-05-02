@@ -2,7 +2,7 @@
 
 Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming. This will guide you in the creation of your first quantum programs using [QISKit](https://qiskit.org).
 
-Content is still being added to this tutorial over time. Feel free to contribute! You can also provide feedback by using the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)
+Content is still being added to this tutorial over time. Feel free to contribute! You can also provide feedback by using the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl).
 
 ## Current modes of play
 
