@@ -2,9 +2,9 @@
 
 Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming, which will guide you in the creation of your first quantum programs.
 
-The command line version found here will help you get started with QISKit. A version focussed on IBM's Quantum Experience will be released as an app soon.
+The command line version found here will help you get started with QISKit. A version focussed on the [IBM Q Experience](http://quantumexperience.ng.bluemix.net/) will be released as an app soon.
 
-This tutorial is currently in beta, and so content will be added over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
+Content is still being added to this tutial over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
 
 ## Current modes of play
 
@@ -22,19 +22,21 @@ More are coming soon.
 
 ## How to Play
 
-The game runs on the command line. To run it, start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
+The easiest way to play is in your browswer. Simply click [this link](https://www.pythonanywhere.com/gists/a5d885816f7dc042a78df11ce6cf9652/main.py/ipython3/).
+
+You can also run the game offline using a terminal. Start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
 
 Once you've downloaded the repository, navigate with the terminal to
 
 ``` Quantum_Programming_Tutorial-master/Hello-Quantum```
 
-Then use the following command to run the tutorial
+Then use the following command to run the tutorial (note: you'll need Python 3)
 
 ```
 python main.py
 ```
 
-The program runs on the terminal. For best results, you should maximize the size of your command line window. If you need to change font and background settings, you can use the `⌘,` shortcut on Mac. The *Basic* profile with Menlo 11pt font and white background work well.
+The program runs on the terminal. For best results, you should maximize the size of your terminal window. If you need to change font and background settings, you can use the `⌘,` shortcut on Mac. The *Basic* profile with Menlo 11pt font and white background work well.
 
 ## What next?
 
