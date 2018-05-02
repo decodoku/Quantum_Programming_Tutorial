@@ -1,10 +1,10 @@
+# -*- coding: utf-8 -*-
+
 #    Created by James Wootton
 #    Copyright © 2018 University of Basel. All rights reserved.
 
-#import replit
-import math
-import subprocess
-import copy
+# import things we need
+import math, copy
 
 from Engine import *
 from Levels import *
@@ -40,6 +40,7 @@ print("\n")
 print("\n")
 print("\n")
 input("> Press Enter to continue...\n")
+ClearScreen()
 print("  Choose which mode you want to play from the following list")
 print("")
 print("  1 - Main Tutorial\n      A gamified tutorial for programming quantum computers.\n")
