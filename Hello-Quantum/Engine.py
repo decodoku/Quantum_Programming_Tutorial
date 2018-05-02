@@ -1,4 +1,6 @@
-import math, subprocess
+# -*- coding: utf-8 -*-
+
+import math
 
 def ClearScreen () :
   # DESCRIPTION:

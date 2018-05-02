@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 #  Created by James Wootton
 #  Copyright © 2018 University of Basel. All rights reserved.
 
@@ -28,7 +30,7 @@ def GetLevelStory ( ) :
                  "The state of this is visualized on the grid using two coloured boxes",
                  "One of the boxes is horizontal and coloured red, and the other is a vertical box coloured blue",
                  "This qubit needs to be reset, which means that the blue box needs to be turned off",
-                 "This is done usig the command known as x",
+                 "This is done using the command known as x",
                  "One x should be enough but, to make sure the its working properly, do it three times instead",
                  "TARGET: Turn off the blue box, and use the x command 3 times"] )
   outro.append( ["Great!",
