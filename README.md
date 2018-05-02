@@ -1,14 +1,12 @@
 # Hello Quantum
 
-Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming, which will guide you in the creation of your first quantum programs.
+Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming. This will guide you in the creation of your first quantum programs using [QISKit](https://qiskit.org).
 
-The command line version found here will help you get started with QISKit. A version focussed on the [IBM Q Experience](http://quantumexperience.ng.bluemix.net/) will be released as an app soon.
-
-Content is still being added to this tutial over time. **We are seeking any and all feedback throughout this process to help us build the finished product. You can use the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)**
+Content is still being added to this tutorial over time. Feel free to contribute! You can also provide feedback by using the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl)
 
 ## Current modes of play
 
-You can start off with the **Main Tutorial**, which will introduce you to the basics of manipulating quantum information. The basic operations of quantum computing are introduced through a set of puzzles. The **Qubit Swapper** mode is more of the same.
+Start off with the **Main Tutorial**, which will introduce you to the basics of manipulating quantum information. The basic operations of quantum computing are introduced through a set of puzzles. The **Qubit Swapper** mode is more of the same.
 
 After this, you may want the freedom to play around with the qubits used in the puzzles, and try out the skills you've learned. For this you can use the **Sandbox Mode**.
 
