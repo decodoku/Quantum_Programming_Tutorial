@@ -675,8 +675,8 @@ def  GetLevelSuperposer ( string1, string2 ) :
 	                "XX":0.0,"XZ":0.0,"ZX":-1.0,"ZZ":0.0,"YY":0.0,
 	                "IX":0.0, "IZ":1.0} )
     success_condition_list.append( {"IZ":-1.0,} )
-    qubits_used_list.append( [ "b[4]", "b[" + j + "]" ] )
-    allowed_gates_list.append( { "b[4]":{}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{} } )
+    qubits_used_list.append( [ "a", "b[" + j + "]" ] )
+    allowed_gates_list.append( { "a":{}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{} } )
     intro.append( ["Since bit "+j+" has the value 1 for both in both file names, the qubit named b["+j+"] should be given a full blue box"] )
     outro.append( ["Great!", "Copy the QISKit program into the notebook. Do this with a right click, rather than ctrl-C"] )
 
@@ -687,10 +687,10 @@ def  GetLevelSuperposer ( string1, string2 ) :
 	                "XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,
 	                "IX":0.0, "IZ":1.0} )
     success_condition_list.append( {"XI":1.0} )
-    qubits_used_list.append( [ "b[4]", "b[0}" ] )
-    allowed_gates_list.append( { "b[4]":{"x":0,"z":0,"h":0}, "b[0}":{}, "both":{} } )
+    qubits_used_list.append( [ "a", "b[0}" ] )
+    allowed_gates_list.append( { "a":{"x":0,"z":0,"h":0}, "b[0}":{}, "both":{} } )
     intro.append( ["Since we are making a superposition of two things, so let's start with a superposition of 0 and 1 on a single qubit",
-                         "We'll do it on qubit b[4], even though this won't actually be part of our final results",
+                         "We'll do it on qubit a, even though this won't actually be part of our final results",
                          "The superposition can be spread to the other qubits from here",
                          "Since we want a superposition of 0 and 1, we need a half full blue box",
                          "Let's go for the superposition for which the red box is empty"] )
@@ -705,10 +705,10 @@ def  GetLevelSuperposer ( string1, string2 ) :
       state_list.append( {"XI":0.0, "ZI":0.0, "XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":0.0,"YY":0.0, "IX":0.0, "IZ":1.0} )
 
     success_condition_list.append( {"ZZ":1.0} )
-    qubits_used_list.append( [ "b[4]", "b[" + j + "]" ] )
-    allowed_gates_list.append( { "b[4]":{"z":0}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{"cz":0} } )
-    intro.append( ["Since "+j+" has different values for the two file names, it needs to be part of the superposition",
-    "So we spread the superposition from qubit b[4] to qubit b["+j+"] by copying the superposed bit",
+    qubits_used_list.append( [ "a", "b[" + j + "]" ] )
+    allowed_gates_list.append( { "a":{"z":0}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{"cz":0} } )
+    intro.append( ["Since bit "+j+" has different values for the two file names, it needs to be part of the superposition",
+    "So we spread the superposition from qubit a to qubit b["+j+"] by copying the superposed bit",
     "This will mean that both qubits will have random outputs from their blue boxes, but those outputs will always agree",
    "The signature of this is that the middle blue box will be empty, so work towards this target"] )
     outro.append( ["Great!",
@@ -718,8 +718,8 @@ def  GetLevelSuperposer ( string1, string2 ) :
 
     state_list.append( {"XI":0.0, "ZI":0.0,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":0.0,"YY":0.0,"IX":0.0, "IZ":1.0} )
     success_condition_list.append( {"ZZ":-1.0} )
-    qubits_used_list.append( [ "b[4]", "b[" + j + "]" ] )
-    allowed_gates_list.append( { "b[4]":{"z":0}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{"cz":0} } )
+    qubits_used_list.append( [ "a", "b[" + j + "]" ] )
+    allowed_gates_list.append( { "a":{"z":0}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{"cz":0} } )
     intro.append( ["Since bit "+j+" has different values for the two file names, it needs to be part of the superposition",
     "But since its value is always different to the first bit in the superposition, we also need to make it disagree",
     "This means that the middle blue box will need to be full"] )
