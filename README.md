@@ -37,7 +37,10 @@ The program runs on the terminal. For best results, you should maximize the size
 ## What next?
 
 For some discussion of what is being done in the tutorial, check out the following articles.
+
 * [Visualizing bits and qubits](https://medium.com/qiskitters/visualizing-bits-and-qubits-9af287047b28)
+
+*[A quantum superposition of a tiger and a bear](https://medium.com/qiskitters/a-quantum-superposition-of-a-tiger-and-a-bear-b461e3b23908)
 
 More are coming soon.
 
