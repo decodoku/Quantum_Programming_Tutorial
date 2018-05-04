@@ -40,7 +40,7 @@ For some discussion of what is being done in the tutorial, check out the followi
 
 * [Visualizing bits and qubits](https://medium.com/qiskitters/visualizing-bits-and-qubits-9af287047b28)
 
-*[A quantum superposition of a tiger and a bear](https://medium.com/qiskitters/a-quantum-superposition-of-a-tiger-and-a-bear-b461e3b23908)
+* [A quantum superposition of a tiger and a bear](https://medium.com/qiskitters/a-quantum-superposition-of-a-tiger-and-a-bear-b461e3b23908)
 
 More are coming soon.
 
