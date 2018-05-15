@@ -433,10 +433,13 @@ def WriteQISKit( gate, qubit, qubits_used, program, mode):
                 
 def MakeTarget ( initial_state, gates ):
         
-    # create target state and string
-    target = MakeState( initial_state, gates )
+    if gates=='swap':
+        target = Swap( initial_state )
+    else:
+        target = MakeState( initial_state, gates )
+        
     target_string = "\n"
     for line in MakeGrid(target,2,2,False):
-            target_string += line + "\n"
+            target_string += "     " + line + "\n"
 
     return target, target_string

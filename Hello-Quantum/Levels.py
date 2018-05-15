@@ -25,11 +25,10 @@ def GetLevelStory ( ) :
 
     intro.append( ["In these puzzles, you'll see a grid and be given a task",
                                  "Your job is to complete that task by using quantum programming",
-                                 "We'll start off with the basics, and then add more as we go",
                                  "Your first job concerns a single qubit, which we call qubit 0",
                                  "The state of this is visualized on the grid using two coloured boxes",
-                                 "One of the boxes is horizontal and coloured red, and the other is a vertical box coloured blue",
-                                 "This is done using the command known as x",
+                                 "Each is either on, off, or something in between",
+                                 "In the first puzzle, your job is to turn the blue box off using the command known as x",
                                  "One x should be enough but, to make sure it's working properly, do it three times instead",
                                  "TARGET: Turn off the blue box, and use the x command 3 times"] )
     outro.append( ["Great!",
@@ -520,83 +519,112 @@ def GetLevelSwaps () :
     intro = []
     outro = []
 
+    
     # 1
     state_list.append( {"XI":0.5, "ZI":0.5,
                                             "XX":-0.5,"XZ":0.0,"ZX":0.0,"ZZ":-0.5,"YY":0.0,
                                             "IX":-0.5, "IZ":-0.5} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
     intro.append( ["In these puzzles, your job is to swap the states of two qubits",
-                                 "This can always be done with nothing more than h operations, and either cz or cx",
-                                 "TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+                   "This can always be done with nothing more than h operations, and either cz or cx",
+                   "TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"] )
     outro.append( ["Well done!","Now try another"] )
 
     # 2
     state_list.append( {"XI":0.5, "ZI":0.0,
                                             "XX":0.5,"XZ":0.5,"ZX":0.0,"ZZ":-0.5,"YY":0.5,
                                             "IX":0.0, "IZ":0.5} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"] )
     outro.append( ["Well done!","Now try another"] )
         
     # 3
     state_list.append( {"XI":0.0, "ZI":0.5,
                                             "XX":-0.5,"XZ":0.0,"ZX":-0.5,"ZZ":0.5,"YY":0.5,
                                             "IX":-0.5, "IZ":0.0} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"] )
     outro.append( ["Well done!","Now try another"] )
         
     # 4
     state_list.append( {"XI":0.0, "ZI":-0.5,
                                             "XX":0.0,"XZ":0.5,"ZX":0.5,"ZZ":-0.5,"YY":0.5,
                                             "IX":0.0, "IZ":0.5} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"])
     outro.append( ["Well done!","Now try another"] )
         
     # 5
     state_list.append( {"XI":0.0, "ZI":0.5,
                                             "XX":0.0,"XZ":0.5,"ZX":-0.5,"ZZ":0.5,"YY":-0.5,
                                             "IX":0.0, "IZ":0.5} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"] )
     outro.append( ["Well done!","Now try another"] )
         
     # 6
     state_list.append( {"XI":0.5, "ZI":0.0,
                                             "XX":-0.5,"XZ":-0.5,"ZX":-0.5,"ZZ":0.0,"YY":0.5,
                                             "IX":-0.5, "IZ":0.0} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"] )
     outro.append( ["Well done!","Now try another"] ) 
         
     # 7
     state_list.append( {"XI":0.5, "ZI":0.0,
                                             "XX":0.5,"XZ":0.5,"ZX":-0.5,"ZZ":0.0,"YY":-0.5,
                                             "IX":0.5, "IZ":0.0} )
-    success_condition_list.append( Swap(state_list[-1]) )
+    target, target_string = MakeTarget( state_list[-1], 'swap' )
+    success_condition_list.append( target )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"h":0}, "1":{"h":0}, "both":{"cz":0} } )
 
-    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa"] )
+    intro.append( ["TARGET: Everything from qubit 0 must be moved to the same place on qubit 1, and vice-versa",
+                   "So given the initial state you'll get, the final state should look like this",
+                   target_string,
+                   "Once the actual puzzle grid comes, you'll have to scroll up to see this again"] )
     outro.append( ["Well done!",
                                  "Your solution to each of these probably would have worked for all the others too",
                                  "If so, you suceeded in making a swap gate!"] ) 
@@ -743,11 +771,6 @@ def GetLevelBell () :
 
     # create target state and string
     target, target_string = MakeTarget( {"XI":0, "ZI":1.0,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0}, [["h","0"],["cx","1"],["q","0"],["h","0"]] )
-
-    target = MakeState( {"XI":0, "ZI":1.0,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0}, [["h","0"],["cx","1"],["q","0"],["h","0"]])
-    target_string = "\n"
-    for line in MakeGrid(target,2,2,False):
-            target_string += line + "\n"
     
     # add them in
     state_list.append( {"XI":0.0, "ZI":1.0,
