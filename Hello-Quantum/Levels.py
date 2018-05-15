@@ -413,8 +413,9 @@ def GetLevelStory ( ) :
   qubits_used_list.append( [ "0", "1" ] )
   allowed_gates_list.append( { "0":{"bloch":1,"q":0}, "1":{}, "both":{"unbloch":0} } )
 
-  intro.append( ["This chip is used to test an operation called q",
-                 "To introduce this, we'll go back to doing the qubits one-by-one",
+  intro.append( ["This chip is used to test an operation called u3(math.pi,0,0)",
+                 "But that's a lot to type, so we'll call it q instead",
+                 "To introduce the q gate, we'll go back to doing the qubits one-by-one",
                  "The q operation makes most sense when the qubits boxes are drawn on top of each other",
                  "To do this, use the bloch command",
                  "TARGET: Use the bloch command on qubit 0, and turn off the blue boxes using the q gate"] )
