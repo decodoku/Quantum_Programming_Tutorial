@@ -29,7 +29,6 @@ def GetLevelStory ( ) :
                  "Your first job concerns a single qubit, which we call qubit 0",
                  "The state of this is visualized on the grid using two coloured boxes",
                  "One of the boxes is horizontal and coloured red, and the other is a vertical box coloured blue",
-                 "This qubit needs to be reset, which means that the blue box needs to be turned off",
                  "This is done using the command known as x",
                  "One x should be enough but, to make sure it's working properly, do it three times instead",
                  "TARGET: Turn off the blue box, and use the x command 3 times"] )
@@ -726,6 +725,43 @@ def  GetLevelSuperposer ( string1, string2 ) :
     "This means that the middle blue box will need to be full"] )
     outro.append( ["Great!",
     "Copy the QISKit program into the notebook. Do this with a right click, rather than ctrl-C"] )
+
+
+  level_num = len(state_list)
+
+  return state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro
+
+# sandbox
+def GetLevelBell () :
+
+  state_list = []
+  success_condition_list = []
+  qubits_used_list = []
+  allowed_gates_list = []
+  intro = []
+  outro = []
+
+  # create target state and string
+  target = MakeInitial( {"XI":0, "ZI":1.0,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0}, [["h","0"],["cx","1"],["q","0"],["h","0"]])
+  target_string = "\n"
+  for line in MakeGrid(target,2,2,False):
+      target_string += line + "\n"
+  
+  # add them in
+  state_list.append( {"XI":0.0, "ZI":1.0,
+                      "XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,
+                      "IX":0.0, "IZ":1.0} )
+  success_condition_list.append( target )
+  allowed_gates_list.append( { "A":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0,"cx":0}, "B":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0,"cx":0}, "both":{"unbloch":0,"cz":0} } )
+
+  intro.append(  ["This mode relates to a Jupyter notebook in which you can explore Bell tests",
+                  "You'll find the notebook at github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test\n",
+                  "A good state to aim for is the following",
+                  target_string,
+                  "But you can also use this mode as a sandbox"])
+  qubits_used_list.append( [ "A", "B" ] )
+  outro.append( ["If you are seeing this, you somehow disproved Heisenberg's uncertainty principle",
+                 "Either that or there is a bug"] )
 
 
   level_num = len(state_list)

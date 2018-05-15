@@ -47,10 +47,11 @@ print("  1 - Main Tutorial\n      A gamified tutorial for programming quantum co
 print("  2 - Qubit Swapper\n      A few puzzles dedicated to the task of swapping qubits\n")
 print("  3 - Sandbox\n      A chance to do what you want with two qubits.\n")
 print("  4 - Image Superposer\n      Write a quantum program to create superpositions of images.\n")
+print("  5 - Bell Test\n      Write a quantum program to explore the unique nature of quantum variables.\n")
 choosing = True
 while choosing:
     mode = input("> Input a number to select a mode...\n")
-    if mode in ["1","2","3","4"]:
+    if mode in ["1","2","3","4","5"]:
         choosing = False
     else:
         input("> That's not a valid mode. Press Enter to try again...\n")
@@ -103,6 +104,9 @@ elif mode=="4":
     state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelSuperposer(string1,string2)
     level = 0
 
+elif mode=="5":
+    state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelBell()
+    level = 0
 else:
     print("> Oops! You shouldn't have been allowed to pick this mode. Restart the program and try again...")
 
@@ -196,9 +200,9 @@ while (level<level_num) :
                 active_qubit = 0
             elif qubit==qubits_used[1] :
                 active_qubit = 1
-            elif gate=="unbloch" :
-                bloch = false
-                active_qubit = -1
+        elif gate=="unbloch" :
+            bloch = False
+            active_qubit = -1
         elif gate=="restart" :
             restart = True
         else :
