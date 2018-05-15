@@ -187,15 +187,7 @@ while (level<level_num) :
             # now apply
             state = ApplyGate( state, gate, qubit_pos )
             # then we write the qiskit commands
-            if gate=="cz" :
-                program.append("program.cz( qubit["+qubits_used[0]+"], qubit["+qubits_used[1]+"] )")
-            elif gate=="cx" :
-                if qubit==qubits_used[0] :
-                    program.append("program.cx( qubit["+qubits_used[1]+"], qubit["+qubits_used[0]+"] )")
-                else :
-                    program.append("program.cx( qubit["+qubits_used[0]+"], qubit["+qubits_used[1]+"] )")
-            else :
-                program.append("program."+gate+"( qubit["+qubit+"] )")
+            WriteQISKit( gate, qubit, qubits_used, program, mode )
 
         # if it is a visualization command, apply it
         elif gate=="bloch" :

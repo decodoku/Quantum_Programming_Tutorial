@@ -407,3 +407,25 @@ def PrintScreen ( message, level, intro, program, state, shown_qubit, active_qub
       print(gate_list)
 
   return input("\n"+message+"\n")
+
+def WriteQISKit( gate, qubit, qubits_used, program, mode):
+    
+    if mode=="5":
+        regL = ""
+        regR = ""
+    else:
+        regL = "qubit["
+        regR = "]"   
+    
+    if gate=="cz" :
+        program.append("program.cz( "+regL+qubits_used[0]+regR+", qubit["+qubits_used[1]+regR+" )")
+    elif gate=="cx" :
+        if qubit==qubits_used[0] :
+            program.append("program.cx( "+regL+qubits_used[1]+regR+", qubit["+qubits_used[0]+"] )")
+        else :
+            program.append("program.cx( "+regL+qubits_used[0]+regR+", qubit["+qubits_used[1]+"] )")
+    elif gate in ["q","qdg"]:
+        sign = "-"*(gate=="qdg")
+        program.append("program.u3( "+sign+"math.pi,0,0, "+regL+qubit+regR+" )")
+    else :
+        program.append("program."+gate+"( "+regL+qubit+regR+" )")
