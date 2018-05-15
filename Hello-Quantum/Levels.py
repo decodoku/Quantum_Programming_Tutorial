@@ -31,7 +31,7 @@ def GetLevelStory ( ) :
                  "One of the boxes is horizontal and coloured red, and the other is a vertical box coloured blue",
                  "This qubit needs to be reset, which means that the blue box needs to be turned off",
                  "This is done using the command known as x",
-                 "One x should be enough but, to make sure the its working properly, do it three times instead",
+                 "One x should be enough but, to make sure it's working properly, do it three times instead",
                  "TARGET: Turn off the blue box, and use the x command 3 times"] )
   outro.append( ["Great!",
                  "The x command turns the blue box on and off, and does nothing to the red box"] )
@@ -678,7 +678,7 @@ def  GetLevelSuperposer ( string1, string2 ) :
     qubits_used_list.append( [ "a", "b[" + j + "]" ] )
     allowed_gates_list.append( { "a":{}, "b[" + j + "]":{"x":0,"z":0,"h":0}, "both":{} } )
     intro.append( ["Since bit "+j+" has the value 1 for both in both file names, the qubit named b["+j+"] should be given a full blue box"] )
-    outro.append( ["Great!", "Copy the QISKit program into the notebook. Do this with a right click, rather than ctrl-C"] )
+    outro.append( ["Great!", "Copy the QISKit program into the notebook."] )
 
 
   if first_super != -1 :
@@ -730,4 +730,3 @@ def  GetLevelSuperposer ( string1, string2 ) :
   level_num = len(state_list)
 
   return state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro
-
