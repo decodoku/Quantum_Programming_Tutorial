@@ -18,7 +18,7 @@ More are coming soon.
 
 ## How to Play
 
-The easiest way to play is in your browswer. Simply click [this link](https://www.pythonanywhere.com/gists/a5d885816f7dc042a78df11ce6cf9652/main.py/ipython3/).
+The easiest way to play is in your browser. Simply click [this link](https://www.pythonanywhere.com/gists/a5d885816f7dc042a78df11ce6cf9652/main.py/ipython3/).
 
 You can also run the game offline using a terminal. Start by downloading this repository using [this link](https://github.com/decodoku/Quantum_Programming_Tutorial/archive/master.zip) and unzipping it.
 
