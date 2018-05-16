@@ -422,12 +422,12 @@ def WriteQISKit( gate, qubit, qubits_used, program, mode):
                 program.append("program.cz( "+regL+qubits_used[0]+regR+", "+regL+qubits_used[1]+regR+" )")
         elif gate=="cx" :
                 if qubit==qubits_used[0] :
-                        program.append("program.cx( "+regL+qubits_used[1]+regR+", "+regL+qubits_used[0]+"] )")
+                        program.append("program.cx( "+regL+qubits_used[1]+regR+", "+regL+qubits_used[0]+" )")
                 else :
-                        program.append("program.cx( "+regL+qubits_used[0]+regR+", "+regL+qubits_used[1]+"] )")
+                        program.append("program.cx( "+regL+qubits_used[0]+regR+", "+regL+qubits_used[1]+" )")
         elif gate in ["q","qdg"]:
                 sign = "-"*(gate=="qdg")
-                program.append("program.u3( "+sign+"math.pi,0,0, "+regL+qubit+regR+" )")
+                program.append("program.u3( "+sign+"math.pi/4,0,0, "+regL+qubit+regR+" )")
         else :
                 program.append("program."+gate+"( "+regL+qubit+regR+" )")
                 
