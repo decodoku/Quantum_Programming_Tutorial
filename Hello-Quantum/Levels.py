@@ -785,8 +785,8 @@ def GetLevelBell () :
                                     target_string,
                                     "But you can also use this mode as a sandbox and make whatever you like"])
     qubits_used_list.append( [ "A", "B" ] )
-    outro.append( ["If you are seeing this, you somehow disproved Heisenberg's uncertainty principle",
-                                 "Either that or there is a bug"] )
+    outro.append( ["Great!",
+        "Copy the QISKit program into the quantum setup_variables() function in the bell_test notebook."] )
 
 
     level_num = len(state_list)

@@ -250,7 +250,7 @@ elif mode=="3" :
 elif mode=="4" :
     input("> Now you have your QISKit program. You just need to run the notebook for your image.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial\n")
 elif mode=="4" :
-    input("> Now you have your QISKit program. You just need to put it in the setup_variables() function in the notebook.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test\n")
+    input("> Now you have your QISKit program. You just need to run the notebook see what it d.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test\n")
 
 
 
