@@ -58,12 +58,12 @@ def GetLevelStory ( ) :
     allowed_gates_list.append( { "0":{"x":0}, "1":{}, "both":{} } )
 
     intro.append( ["Now we move on to another chip, with another qubit 0. But what is a qubit?",
-                                 "A qubit is a quantum object that can be turned into a bit",
+                   "A qubit is a quantum object that can be turned into a bit",
                                  "There are many ways we can do this, and the result we get depends on the method we use",
-                                 "Our favourite way to extract the bit is to use the blue box",
-                                 "If it's 'off', we get 0. If it's 'on' we get 1",
+                                 "The two boxes represent our two favourite methods of extracting a bit",
+                                 "We usually use the blue box: If it's 'off', we get 0; if it's 'on' we get 1",
                                  "TARGET: Turn off the blue box"] )
-    outro.append( ["Great!","Now for the next qubit"] )
+    outro.append( ["Great!","You can also learn about how we visualze the qubits at\n  https://medium.com/qiskitters/visualizing-bits-and-qubits-9af287047b28 ","Now for the next qubit"] )
     
     #4
     state_list.append( {"XI":0.0, "ZI":0.0,
@@ -723,7 +723,7 @@ def    GetLevelSuperposer ( string1, string2 ) :
                                                  "Since we want a superposition of 0 and 1, we need a half full blue box",
                                                  "Let's go for the superposition for which the red box is empty"] )
         outro.append( ["Great!",
-                                                 "Copy the QISKit program into the notebook. Do this with a right click, rather than ctrl-C"] )
+                                                 "Copy the QISKit program into the notebook."] )
 
     for j in superpos["same"] :
 
@@ -740,7 +740,7 @@ def    GetLevelSuperposer ( string1, string2 ) :
         "This will mean that both qubits will have random outputs from their blue boxes, but those outputs will always agree",
      "The signature of this is that the middle blue box will be empty, so work towards this target"] )
         outro.append( ["Great!",
-        "Copy the QISKit program into the notebook. Do this with a right click, rather than ctrl-C"] )
+        "Copy the QISKit program into the notebook."] )
 
     for j in superpos["diff"] :
 
@@ -752,7 +752,7 @@ def    GetLevelSuperposer ( string1, string2 ) :
         "But since its value is always different to the first bit in the superposition, we also need to make it disagree",
         "This means that the middle blue box will need to be full"] )
         outro.append( ["Great!",
-        "Copy the QISKit program into the notebook. Do this with a right click, rather than ctrl-C"] )
+        "Copy the QISKit program into the notebook."] )
 
 
     level_num = len(state_list)
@@ -780,10 +780,10 @@ def GetLevelBell () :
     allowed_gates_list.append( { "A":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0,"cx":0}, "B":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0,"cx":0}, "both":{"unbloch":0,"cz":0} } )
 
     intro.append(    ["This mode relates to a Jupyter notebook in which you can explore Bell tests",
-                                    "You'll find the notebook at github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test ",
+                                    "You'll find the notebook at https://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test",
                                     "A good state to aim for is the following",
                                     target_string,
-                                    "But you can also use this mode as a sandbox"])
+                                    "But you can also use this mode as a sandbox and make whatever you like"])
     qubits_used_list.append( [ "A", "B" ] )
     outro.append( ["If you are seeing this, you somehow disproved Heisenberg's uncertainty principle",
                                  "Either that or there is a bug"] )

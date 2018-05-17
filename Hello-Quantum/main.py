@@ -82,11 +82,11 @@ elif mode=="4":
 
     allowed_filenames = ["0000","0001","0010","0011", "0100","0101","0110","0111", "1000","1001","1010","1011", "1100","1101","1110","1111"]
 
-    input("\n> This mode relates to a Jupyter notebook, which you'll find at github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer...\n")
-    input("\n> There you'll find 16 images, all with a bit string as their filename...\n")
+    input("\n> This mode relates to a Jupyter notebook, which you'll find at\n  https://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer...\n")
+    input("> There you'll find 16 images, all with a bit string as their filename...\n")
     choosing = True
     while choosing :
-        string1 = input("\n> Choose one of these images by typing the filename below...\n")
+        string1 = input("> Choose one of these images by typing the filename below...\n")
         if string1 in allowed_filenames:
             choosing = False
         else:
@@ -244,11 +244,13 @@ while (level<level_num) :
 
 
 if mode in ["1","2"] :
-    input("> That's all the levels we have for now. Restart the program, or continue your QISKit journey at QISKit.org\n")
+    input("> That's all the levels we have for now\nRestart the program to explore the other modes, or continue your quantum journey at ibm.biz/helloquantum\n")
 elif mode=="3" :
     input("> How are you seeing this?!?!?!?!?!?!?!\n")
 elif mode=="4" :
-    input("> Now you have your QISKit program. You just need to run the notebook for your image.\n")
+    input("> Now you have your QISKit program. You just need to run the notebook for your image.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial\n")
+elif mode=="4" :
+    input("> Now you have your QISKit program. You just need to put it in the setup_variables() function in the notebook.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test\n")
 
 
 
