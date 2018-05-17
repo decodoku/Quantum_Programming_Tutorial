@@ -39,7 +39,7 @@ print("\n")
 print("\n")
 print("\n")
 print("\n")
-input("> Press Enter to continue...\n")
+input("> Note: For the best experience, you may need to zoom out\n> Press Enter to continue...\n")
 ClearScreen()
 print("  Choose which mode you want to play from the following list")
 print("")
@@ -47,10 +47,11 @@ print("  1 - Main Tutorial\n      A gamified tutorial for programming quantum co
 print("  2 - Qubit Swapper\n      A few puzzles dedicated to the task of swapping qubits\n")
 print("  3 - Sandbox\n      A chance to do what you want with two qubits.\n")
 print("  4 - Image Superposer\n      Write a quantum program to create superpositions of images.\n")
+print("  5 - Bell Test\n      Write a quantum program to explore the unique nature of quantum variables.\n")
 choosing = True
 while choosing:
     mode = input("> Input a number to select a mode...\n")
-    if mode in ["1","2","3","4"]:
+    if mode in ["1","2","3","4","5"]:
         choosing = False
     else:
         input("> That's not a valid mode. Press Enter to try again...\n")
@@ -81,11 +82,11 @@ elif mode=="4":
 
     allowed_filenames = ["0000","0001","0010","0011", "0100","0101","0110","0111", "1000","1001","1010","1011", "1100","1101","1110","1111"]
 
-    input("\n> This mode relates to a Jupyter notebook, which you'll find at github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer...\n")
-    input("\n> There you'll find 16 images, all with a bit string as their filename...\n")
+    input("\n> This mode relates to a Jupyter notebook, which you'll find at\n  https://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer...\n")
+    input("> There you'll find 16 images, all with a bit string as their filename...\n")
     choosing = True
     while choosing :
-        string1 = input("\n> Choose one of these images by typing the filename below...\n")
+        string1 = input("> Choose one of these images by typing the filename below...\n")
         if string1 in allowed_filenames:
             choosing = False
         else:
@@ -103,6 +104,9 @@ elif mode=="4":
     state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelSuperposer(string1,string2)
     level = 0
 
+elif mode=="5":
+    state_list, success_condition_list, qubits_used_list, allowed_gates_list, level_num, intro, outro = GetLevelBell()
+    level = 0
 else:
     print("> Oops! You shouldn't have been allowed to pick this mode. Restart the program and try again...")
 
@@ -187,15 +191,7 @@ while (level<level_num) :
             # now apply
             state = ApplyGate( state, gate, qubit_pos )
             # then we write the qiskit commands
-            if gate=="cz" :
-                program.append("program.cz( qubit["+qubits_used[0]+"], qubit["+qubits_used[1]+"] )")
-            elif gate=="cx" :
-                if qubit==qubits_used[0] :
-                    program.append("program.cx( qubit["+qubits_used[1]+"], qubit["+qubits_used[0]+"] )")
-                else :
-                    program.append("program.cx( qubit["+qubits_used[0]+"], qubit["+qubits_used[1]+"] )")
-            else :
-                program.append("program."+gate+"( qubit["+qubit+"] )")
+            WriteQISKit( gate, qubit, qubits_used, program, mode )
 
         # if it is a visualization command, apply it
         elif gate=="bloch" :
@@ -204,9 +200,9 @@ while (level<level_num) :
                 active_qubit = 0
             elif qubit==qubits_used[1] :
                 active_qubit = 1
-            elif gate=="unbloch" :
-                bloch = false
-                active_qubit = -1
+        elif gate=="unbloch" :
+            bloch = False
+            active_qubit = -1
         elif gate=="restart" :
             restart = True
         else :
@@ -248,11 +244,13 @@ while (level<level_num) :
 
 
 if mode in ["1","2"] :
-    input("> That's all the levels we have for now. Restart the program, or continue your QISKit journey at QISKit.org\n")
+    input("> That's all the levels we have for now\nRestart the program to explore the other modes, or continue your quantum journey at ibm.biz/helloquantum\n")
 elif mode=="3" :
     input("> How are you seeing this?!?!?!?!?!?!?!\n")
 elif mode=="4" :
-    input("> Now you have your QISKit program. You just need to run the notebook for your image.\n")
+    input("> Now you have your QISKit program. You just need to run the notebook for your image.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial\n")
+elif mode=="4" :
+    input("> Now you have your QISKit program. You just need to run the notebook see what it d.\nhttps://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/bell-test\n")
 
 
 
