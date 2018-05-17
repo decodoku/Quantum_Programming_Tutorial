@@ -2,6 +2,8 @@
 
 Do you want to program quantum computers, but don't know where to start? Then you have found the right place! Here you will find a gamified tutorial to quantum programming. This will guide you in the creation of your first quantum programs using [QISKit](https://qiskit.org).
 
+If you'd prefer content focussed on the IBM Q Experience instead, [check out our app](https://ibm.biz/helloquantum).
+
 Content is still being added to this tutorial over time. Feel free to contribute! You can also provide feedback by using the survey [here](http://www.surveygizmo.com/s3/4213712/helloquantum-cl).
 
 ## Current modes of play
@@ -14,7 +16,7 @@ There are then the following range of modes designed to interact with Jupyter no
 
 * **Image Superposer**: Create quantum superpositions of images with the notebook [here](https://github.com/decodoku/Quantum_Programming_Tutorial/tree/master/image-superposer).
 
-More are coming soon.
+* **Bell Test**: Investigate the differences between normal variables and quantum variables with the notebook [here](https://github.com/decodoku/Quantum_Programming_Tutorial/blob/master/bell-test/bell-test.ipynb).
 
 ## How to Play
 
@@ -41,8 +43,6 @@ For some discussion of what is being done in the tutorial, check out the followi
 * [Visualizing bits and qubits](https://medium.com/qiskitters/visualizing-bits-and-qubits-9af287047b28)
 
 * [A quantum superposition of a tiger and a bear](https://medium.com/qiskitters/a-quantum-superposition-of-a-tiger-and-a-bear-b461e3b23908)
-
-More are coming soon.
 
 Once you have mastered this gamified tutorial, you will be writing the kind of quantum programs found in the [tutorial for the QISKit SDK](https://github.com/QISKit/qiskit-tutorial). So head there to find more inspiration.
 
