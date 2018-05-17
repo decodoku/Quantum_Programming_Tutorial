@@ -44,6 +44,8 @@ For some discussion of what is being done in the tutorial, check out the followi
 
 * [A quantum superposition of a tiger and a bear](https://medium.com/qiskitters/a-quantum-superposition-of-a-tiger-and-a-bear-b461e3b23908)
 
+* [Why variables in quantum computers can be a little spooky](https://medium.com/qiskitters/why-variables-in-quantum-computers-can-be-a-little-spooky-cc5eb226f772)
+
 Once you have mastered this gamified tutorial, you will be writing the kind of quantum programs found in the [tutorial for the QISKit SDK](https://github.com/QISKit/qiskit-tutorial). So head there to find more inspiration.
 
 ## Credits
