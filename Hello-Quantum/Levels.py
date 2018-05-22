@@ -407,7 +407,7 @@ def GetLevelStory ( ) :
 
     #27
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0}, [["qdg","0"],["qdg","0"],["qdg","0"]]) )
-    success_condition_list.append( {"ZI":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"bloch":1,"q":0}, "1":{}, "both":{"unbloch":0} } )
 
@@ -421,7 +421,7 @@ def GetLevelStory ( ) :
 
     #28
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0}, [["qdg","1"],["qdg","1"],["qdg","1"]]) )
-    success_condition_list.append( {"IZ":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{}, "1":{"bloch":1,"q":0}, "both":{"unbloch":0} } )
 
@@ -436,7 +436,7 @@ def GetLevelStory ( ) :
     #29
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0},
                                                                     [["qdg","0"],["qdg","0"],["qdg","1"]]) )
-    success_condition_list.append( {"IZ":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"bloch":0,"q":0}, "1":{"bloch":0,"q":0}, "both":{"unbloch":0} } )
 
@@ -451,7 +451,7 @@ def GetLevelStory ( ) :
     #30
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0},
                                                                     [["qdg","0"],["q","1"]]) )
-    success_condition_list.append( {"IZ":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"x":0,"z":0,"h":0,"bloch":0,"q":1}, "1":{"x":0,"z":0,"h":0,"bloch":0,"q":1}, "both":{"unbloch":0} } )
 
@@ -464,7 +464,7 @@ def GetLevelStory ( ) :
     #31
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0},
                                                                     [["q","0"],["q","0"],["q","1"]]) )
-    success_condition_list.append( {"IZ":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0}, "1":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0}, "both":{"unbloch":0} } )
 
@@ -478,7 +478,7 @@ def GetLevelStory ( ) :
     #32
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0},
                                                                     [["z","0"],["h","0"],["h","1"]]) )
-    success_condition_list.append( {"IZ":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"x":0,"z":0,"bloch":0,"q":0,"qdg":0}, "1":{"x":0,"z":0,"bloch":0,"q":0,"qdg":0}, "both":{"unbloch":0} } )
 
@@ -491,7 +491,7 @@ def GetLevelStory ( ) :
     #33
     state_list.append( MakeState( {"XI":0, "ZI":1,"XX":0.0,"XZ":0.0,"ZX":0.0,"ZZ":1.0,"YY":0.0,"IX":0.0, "IZ":1.0},
                                                                     [["h","1"]]) )
-    success_condition_list.append( {"IZ":1.0} )
+    success_condition_list.append( {"IZ":1.0,"ZI":1.0} )
     qubits_used_list.append( [ "0", "1" ] )
     allowed_gates_list.append( { "0":{"x":0,"z":0,"h":0,"bloch":0,"q":0,"qdg":0}, "1":{"x":0,"z":0,"bloch":0,"q":1,"qdg":1}, "both":{"unbloch":0,"cz":0} } )
 
