@@ -2,10 +2,6 @@
 
 This folder contains an upgraded version of the [command line Hello Quantum tutorial](https://medium.com/qiskit/visualizing-bits-and-qubits-9af287047b28). It has been made for Jupyter notebooks.
 
-The idea is that this could be the basis for
-* Presentations given by IBMers (which their own custom-made Hello Quantum levels)
-* A tutorial for potential users to self-study.
-
 Current content here could be used for either of the above cases. It is organized in a series of chapters, each building on the last.
 
 * [Chapter 1: Bits](Bits.ipynb)
