@@ -1,8 +1,6 @@
-# Hello Quantum - Qiskit Edition [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/decodoku/Quantum_Programming_Tutorial/master?filepath=1_Bits.ipynb)
+# Hello Quantum - Qiskit Edition [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/decodoku/Quantum_Programming_Tutorial/master?filepath=.ipynb)
 
 This folder contains an upgraded version of the [command line Hello Quantum tutorial](https://medium.com/qiskit/visualizing-bits-and-qubits-9af287047b28). It has been made for Jupyter notebooks.
-
-Current content here could be used for either of the above cases. It is organized in a series of chapters, each building on the last.
 
 * [Chapter 1: Bits](1_Bits.ipynb)
 * [Chapter 2: Single Qubit Gates](2_Single-Qubit-Gates.ipynb)
