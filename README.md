@@ -1,4 +1,4 @@
-# Hello Quantum - Qiskit Edition
+# Hello Quantum - Qiskit Edition [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/decodoku/Quantum_Programming_Tutorial/master?filepath=1_Bits.ipynb)
 
 This folder contains an upgraded version of the [command line Hello Quantum tutorial](https://medium.com/qiskit/visualizing-bits-and-qubits-9af287047b28). It has been made for Jupyter notebooks.
 
