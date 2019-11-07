@@ -1,4 +1,4 @@
-from qiskit import ClassicalRegister, QuantumRegister, QuantumCircuit, execute, Aer
+from qiskit import ClassicalRegister, QuantumRegister, QuantumCircuit, execute, BasicAer
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,7 +21,7 @@ except Exception as e:
 
 class run_game():
     
-    def __init__(self,initialize, success_condition, allowed_gates, vi, qubit_names, eps=0.1, backend='qasm_simulator_py',shots=1024,mode='circle',verbose=False):
+    def __init__(self,initialize, success_condition, allowed_gates, vi, qubit_names, eps=0.1, backend='qasm_simulator',shots=1024,mode='circle',verbose=False):
    
         def get_total_gate_list():
             # get a text block describing allowed gates
@@ -193,7 +193,7 @@ class run_game():
     
 class pauli_grid():
 
-    def __init__(self,backend='qasm_simulator_py',shots=1024,mode='circle'):
+    def __init__(self,backend='qasm_simulator',shots=1024,mode='circle'):
         
         self.backend = backend
         self.shots = shots
@@ -244,7 +244,7 @@ class pauli_grid():
                     temp_qc.h(self.qr[j])
             temp_qc.barrier(self.qr)
             temp_qc.measure(self.qr,self.cr)
-            job = execute(temp_qc, backend=Aer.get_backend(self.backend), shots=self.shots)
+            job = execute(temp_qc, backend=BasicAer.get_backend(self.backend), shots=self.shots)
             results[basis] = job.result().get_counts()
             for string in results[basis]:
                 results[basis][string] = results[basis][string]/self.shots
