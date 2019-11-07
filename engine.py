@@ -17,12 +17,12 @@ try:
     #set api
     register(qx_config['APItoken'], qx_config['url'])
 except Exception as e:
-    pass 
+    pass
 
 class run_game():
-    
-    def __init__(self,initialize, success_condition, allowed_gates, vi, qubit_names, eps=0.1, backend='qasm_simulator_py',shots=1024,mode='circle',verbose=False):
-   
+
+    def __init__(self,initialize, success_condition, allowed_gates, vi, qubit_names, eps=0.1, backend='qasm_simulator',shots=1024,mode='circle',verbose=False):
+
         def get_total_gate_list():
             # get a text block describing allowed gates
             total_gate_list = ""
